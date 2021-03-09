@@ -111,8 +111,7 @@
       "defaultValue": "S",
       "allowedValues": [
         "S",
-        "M",
-        "L"
+        "M"
       ],
       "metadata": {
         "description": "T-shirt size of the Spark cluster"
@@ -134,19 +133,14 @@
     "sharedTemplateName": "shared-resources",
     "jumpboxTemplateName": "jumpbox-resources-",
     "tshirtSizeS": {
-      "numberOfMasterInstances": 1,
+      "numberOfMasterInstances": 2,
       "numberOfSlavesInstances": 1,
-      "vmSize": "Standard_A2"
+      "vmSize": "Standard_F4s_v2"
     },
     "tshirtSizeM": {
-      "numberOfMasterInstances": 1,
-      "numberOfSlavesInstances": 4,
-      "vmSize": "Standard_A4"
-    },
-    "tshirtSizeL": {
-      "numberOfMasterInstances": 1,
-      "numberOfSlavesInstances": 6,
-      "vmSize": "Standard_A7"
+      "numberOfMasterInstances": 2,
+      "numberOfSlavesInstances": 2,
+      "vmSize": "Standard_F4s_v2"
     },
     "numberOfMasterInstances": "[variables(concat('tshirtSize', parameters('tshirtSize'))).numberOfMasterInstances]",
     "numberOfSlavesInstances": "[variables(concat('tshirtSize', parameters('tshirtSize'))).numberOfSlavesInstances]",
